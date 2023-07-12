@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Roboto&display=swap" rel="stylesheet">
-    <script src="./assets/js/script.js"></script>
+   
     <link rel="shortcut icon" href="./assets/img/Hopstarter-Book-Marvel-Book.256.ico" type="image/x-icon">
 </head>
 <body>
@@ -18,32 +18,26 @@
     
     <main>
         <div id="selecBar">
-            <div onclick="chosenHero('hulkSection')">
-                <span>Hulk</span>
+            <div onclick="chosenHero('hulkSection'); turnRed('hulkSpan')" id="hulkSpan">
+                <span class="heroText">Hulk</span>
             </div>
-
-            <div onclick="chosenHero('spiderSection') ">
-                <span>Spider-man</span>
+            <div onclick="chosenHero('spiderSection'); turnRed('spiderSpan')" id="spiderSpan">
+                <span class="heroText">Spider-man</span>
             </div>
-
-            <div onclick="chosenHero('ironmanSection')">
-                <span>Iron Man</span>
+            <div onclick="chosenHero('ironmanSection'); turnRed('ironmanSpan')" id="ironmanSpan">
+                <span class="heroText">Iron Man</span>
             </div>
-
-            <div onclick="chosenHero('thorSection')">
-                <span>Thor</span>
+            <div onclick="chosenHero('thorSection'); turnRed('thorSpan')" id="thorSpan">
+                <span class="heroText">Thor</span>
             </div>
-
-            <div onclick="chosenHero('hawkeyeSection')">
-                <span>Hawkeye</span>
+            <div onclick="chosenHero('hawkeyeSection'); turnRed('hawkeyeSpan')" id="hawkeyeSpan">
+                <span class="heroText">Hawkeye</span>
             </div>
-
-            <div onclick="chosenHero('blackwidowSection')">
-                <span>Black Widow</span>
+            <div onclick="chosenHero('blackwidowSection'); turnRed('blackwidowSpan')" id="blackwidowSpan">
+                <span class="heroText">Black Widow</span>
             </div>
-
-            <div onclick="chosenHero('captainSection')">
-                <span>Captain America</span>
+            <div onclick="chosenHero('captainSection'); turnRed('captainSpan')" id="captainSpan">
+                <span class="heroText">Captain America</span>
             </div>
         </div>
 
@@ -198,4 +192,5 @@
         </section>
     </main>
 </body>
+<script src="./assets/js/script.js"></script>
 </html>

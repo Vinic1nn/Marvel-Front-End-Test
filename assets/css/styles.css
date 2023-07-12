@@ -30,19 +30,18 @@ header {
     
 }
 #selecBar div {
-    object-fit: cover;
-    display: flex;
+    clip-path: polygon(20% 0%, 80% 0%, 100% 0, 100% 70%, 80% 100%, 20% 100%, 0 100%, 0% 30%);
     padding: 10px 35px 10px 35px;
     font-size: 17px;
   }
-#selecBar div:hover {
-    clip-path: polygon(20% 0%, 80% 0%, 100% 0, 100% 70%, 80% 100%, 20% 100%, 0 100%, 0% 30%);
-    background-color: #e62429;
-    cursor: pointer;
-   
+.heroText:hover {
+  transform:scale(1.5);
+  transition: all 0.2s ease-in-out;
 }
-#selecBar span.clicked {
-    background-color: #e62429;
+
+
+#selecBar div:hover {
+
     cursor: pointer;
 }
 section {
@@ -61,6 +60,7 @@ section {
     grid-area: Text;
   }
   section div#h1 {
+
     text-align: center;
     font-size: 30px;
     grid-area: h1;
