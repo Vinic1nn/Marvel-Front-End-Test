@@ -3,6 +3,7 @@ body {
     background-color: #101010;
     color: #fff;
     font-family:'Oswald', 'Roboto';
+    position: relative;
 }
 header {
     position: relative;
@@ -27,7 +28,6 @@ header {
     grid-template-areas: "hero hero hero hero hero"; 
     margin-top: 25px;
     place-items: center;
-    
 }
 #selecBar div {
     clip-path: polygon(20% 0%, 80% 0%, 100% 0, 100% 70%, 80% 100%, 20% 100%, 0 100%, 0% 30%);
@@ -38,10 +38,7 @@ header {
   transform:scale(1.5);
   transition: all 0.2s ease-in-out;
 }
-
-
 #selecBar div:hover {
-
     cursor: pointer;
 }
 section {
@@ -53,6 +50,7 @@ section {
       "h1 h1 h1 h1"
       ". Img Text ."
       ". . . ."; 
+    margin-bottom: 25px;
   }
   section div#p {
     font-size: 14px;
@@ -73,4 +71,20 @@ section {
     object-fit: contain;
     height: 80%;
     width: 80%;
+  }
+  footer{
+    display: flex;
+    flex-direction: row;
+    background: #101010;
+    align-items: center;
+    width: 100%;
+    height: 5%;
+    position: fixed;
+    bottom: 0%;
+    border-top:1px solid black;
+    
+  }
+  footer div#results{
+    font-family: 'Roboto';
+    color: #fff;
   }
