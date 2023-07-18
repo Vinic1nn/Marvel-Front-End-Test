@@ -3,6 +3,18 @@ let visibleNow = null;
 let anotherRed = false;
 let redNow = null;
 
+
+const resDiv = document.querySelector('#results');
+
+function getAdvice() {
+    fetch(`https://api.adviceslip.com/advice/${Math.floor(Math.random() * (100-1) +1)}`)
+        .then(response => response.json())
+        .then(adviceData => {
+            const adv = adviceData.slip;
+            console.log(adviceData)
+            resDiv.innerHTML = `<p>${adv.advice}</p>`;
+        });
+}
 function chosenHero(hero) {
     isAnotherVisible(anotherVisible, visibleNow);
     let display = document.getElementById(hero).style.display;
@@ -11,6 +23,7 @@ function chosenHero(hero) {
         anotherVisible = true;
         visibleNow = hero;
     }
+    getAdvice()
 }
 function isAnotherVisible(another, visibleNow) {
     if (another) {
@@ -36,15 +49,4 @@ window.onload = () => {
 }
 
 
-const resDiv = document.querySelector('#results');
-
-function getAdvice() {
-    fetch(`https://api.adviceslip.com/advice`)
-        .then(response => response.json())
-        .then(adviceData => {
-            const adv = adviceData.slip;
-            resDiv.innerHTML = `<p>${adv.advice}</p>`;
-            console.log(adv.advice);
-        });
-}
 
